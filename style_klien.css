@@ -1,0 +1,75 @@
+body {
+  font-family: "Playfair Display", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.heading {
+  font-family: "Poppins", serif;
+}
+
+/*Menu beranda*/
+
+/*Menu galeri*/
+.galeri-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 90%;
+}
+
+.galeri-img-wrapper img {
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.galeri-img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.galeri-img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.galeri-img-wrapper:hover::before {
+  opacity: 1;
+}
+
+#modalImagePreview {
+  max-width: 90%;
+  max-height: 80vh;
+  margin: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.btn-dark {
+  display: block;
+  margin: 40px auto 10px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  background-color: #343a40;
+  border: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.btn-dark:hover {
+  background-color: #1d2124;
+}
